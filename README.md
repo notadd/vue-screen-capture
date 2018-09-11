@@ -42,7 +42,7 @@
 > `html`：要截图的dom元素
 
 #### 组件事件
-> `generate`：组件生成canvas后执行，返回值为canvas的base64
+> `generate`：组件生成canvas后执行，返回值为canvas的base64
 
 #### 组件方法
 > `capture`：生成截图
