@@ -1,13 +1,16 @@
 {
   "name": "vue-screen-capture",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-lib": "vue-cli-service build --dest dist/lib --target lib --name screen-capture src/components/ScreenCapture.vue && cp ./lib/* ./dist && cp ./README.md ./dist",
+    "publish-lib": "cd dist && npm publish --access public",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@notadd/vue-screen-capture": "^1.0.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {

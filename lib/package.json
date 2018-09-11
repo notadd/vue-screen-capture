@@ -1,0 +1,22 @@
+{
+    "name": "@notadd/vue-screen-capture",
+    "version": "1.0.0",
+    "description": "基于 `html2canvas` 的vue截图组件",
+    "dependencies": {
+        "html2canvas": "^1.0.0-alpha.12"
+    },
+    "main": "./lib/screen-capture.common.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/notadd/vue-screen-capture.git"
+    },
+    "keywords": [
+        "vue",
+        "screen capture"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/notadd/vue-screen-capture/issues"
+    },
+    "homepage": "https://github.com/notadd/vue-screen-capture#readme"
+}
