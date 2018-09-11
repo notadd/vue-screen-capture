@@ -33,7 +33,7 @@
 + 使用组件
 
 ```html
-<ScreenCapture @generate="render" ref="sc" :html="html"></ScreenCapture>
+<screen-capture @generate="render" ref="sc" :html="html"></screen-capture>
 ```
 
 ### 说明：

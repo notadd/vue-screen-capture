@@ -31,7 +31,7 @@
         </ul>
       </div>
       <h2 @click="capture">截图</h2>
-      <ScreenCapture @generate="render" ref="sc" :html="html"></ScreenCapture>
+      <screen-capture @generate="render" ref="sc" :html="html"></screen-capture>
   </div>
 </template>
 
