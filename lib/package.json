@@ -1,6 +1,6 @@
 {
     "name": "@notadd/vue-screen-capture",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "基于 `html2canvas` 的vue截图组件",
     "dependencies": {
         "html2canvas": "^1.0.0-alpha.12"

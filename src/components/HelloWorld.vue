@@ -31,7 +31,9 @@
         </ul>
       </div>
       <h2 @click="capture">截图</h2>
-      <screen-capture @generate="render" ref="sc" :html="html"></screen-capture>
+      <h2 @click="clear">清空</h2>
+      <h2 @click="render">生成</h2>
+      <screen-capture ref="sc" :html="html"></screen-capture>
   </div>
 </template>
 
@@ -56,8 +58,11 @@ export default {
     capture() {
         this.$refs.sc.capture();
     },
-    render(e) {
-        console.log(e)
+    clear() {
+        this.$refs.sc.clear();
+    },
+    render() {
+        console.log(this.$refs.sc.getCaptureImage());
     }
   }
 };

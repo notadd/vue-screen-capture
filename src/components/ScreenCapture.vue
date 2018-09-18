@@ -29,6 +29,15 @@ export default {
                 this.ctx = document.querySelector("#capture-canvas").getContext("2d");
             });
         },
+        clear() {
+            const capture = this.$refs.capture;
+            capture.removeChild(document.querySelector('#capture-canvas'));
+        },
+        getCaptureImage() {
+            let canvas = document.querySelector("#capture-canvas");
+            let dataURL = canvas.toDataURL();
+            return this.dataURLtoFile(dataURL, 'capture.png');
+        },
         captureDom(dom, callback) {
             let shareContent = dom; // 需要绘制的部分的 (原生）dom 对象 ，注意容器的宽度不要使用百分比，使用固定宽度，避免缩放问题
             let width = shareContent.offsetWidth; // 获取(原生）dom 宽度
@@ -84,9 +93,6 @@ export default {
         },
         onMouseUp() {
             this.drawFlag = false;
-            let canvas = document.querySelector("#capture-canvas");
-            let dataURL = canvas.toDataURL();
-            this.$emit('generate', dataURL);
         },
         drawLlie(x, y) {
             if (!this.ctx) return;
@@ -100,7 +106,15 @@ export default {
             this.ctx.lineTo(this.oldPoint.x, this.oldPoint.y);
             this.ctx.stroke();
             this.ctx.closePath();
-        }
+        },
+        dataURLtoFile(dataurl, filename) {
+            let arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+                bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+            while(n--){
+                u8arr[n] = bstr.charCodeAt(n);
+            }
+            return new File([u8arr], filename, {type:mime});
+        },
     }
 }
 </script>
