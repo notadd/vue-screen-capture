@@ -11,13 +11,13 @@
   },
   "dependencies": {
     "@notadd/vue-screen-capture": "1.0.0",
-    "vue": "2.5.17"
+    "vue": "2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "3.7.0",
     "@vue/cli-plugin-eslint": "3.7.0",
     "@vue/cli-service": "3.7.0",
-    "vue-template-compiler": "2.5.17"
+    "vue-template-compiler": "2.6.10"
   },
   "eslintConfig": {
     "root": true,
