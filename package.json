@@ -10,7 +10,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@notadd/vue-screen-capture": "1.0.0",
+    "@notadd/vue-screen-capture": "1.0.1",
     "vue": "2.5.17"
   },
   "devDependencies": {
